@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://RaceCar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RaceTrack.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+bake_interval = 2.0
+_data = {
+"points": PoolVector2Array( -33.1113, -134.56, 33.1113, 134.56, 112, 320, -290, 24, 290, -24, 344, 968, -316, 76, 316, -76, 656, 368, -210, -70, 210, 70, 944, 1024, -70, 230, 70, -230, 1360, 384, 44, 220, -44, -220, 1448, -128, 170, -100, -170, 100, 952, -320, -8, -126, 8, 126, 736, -24, -206, 52, 206, -52, 1056, 208, 4, 208, -4, -208, 1344, -352, 98, 100, -98, -100, 1216, -728, 200, -8, -200, 8, 712, -840, 245.081, -191.959, -245.081, 191.959, -64, -688, 323.464, -123.678, -323.464, 123.678, -736, 296, 88.0013, 104.65, -88.0013, -104.65, -1264, 168, -121.299, 176.003, 121.299, -176.003, -1296, -640, -204.544, -137.948, 204.544, 137.948, -400, -600, -49.9467, -140.326, 49.9467, 140.326, 8, -104, -9.76439, -97.3289, 9.76439, 97.3289, 112, 320 )
+}
+
+[node name="Track2" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+self_modulate = Color( 1, 1, 1, 1 )
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+track_color = Color( 0.858824, 0.0784314, 0.239216, 1 )
+
+[node name="RaceCar" parent="Path2D" instance=ExtResource( 1 )]
+position = Vector2( 112, 320 )
+rotation = 1.34391
