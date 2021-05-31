@@ -7,4 +7,6 @@ Face center of track to move faster, handles vibrate if you're facing the bottom
 
 Controller vibrates 3 times at the start of a track, vibrates once when completed, and twice if you broke a previous time record.
 
+Left joystick to steer up and down
+
 A X B Y buttons to switch tracks
